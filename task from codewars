@@ -1,0 +1,16 @@
+m = []
+n = int(input('Введите количество переменных в списке'))
+for i in range(n):
+    m.append(int(input('Введите переменную')))
+min=m[0]
+max=m[0]
+for i in range(n):
+    if m[i]>max:
+        max=m[i]
+    if m[i]<min:
+        min=m[i]
+print('Наибольшее число в массиве', max)
+print('Наименьшее число в массиве', min)
+
+
+#https://www.codewars.com/kata/577a98a6ae28071780000989
