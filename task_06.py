@@ -15,3 +15,7 @@ my_favorite_songs = {
     'Nowhere to Run': 2.58,
     'In This World': 4.02,
 }
+songs = []
+for i in my_favorite_songs:
+    songs.append(my_favorite_songs[i])
+print(f'Три песни звучат {sum(r.sample(songs, k=3))} минут')
