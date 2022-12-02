@@ -1,4 +1,4 @@
-# Задача 4
+# Задача 4 ДЗ
 # Приведем плейлист песен в виде списка списков
 # Список my_favorite_songs содержит список названий и длительности каждого трека
 # Выведите общее время звучания трех случайных песен в формате
@@ -17,8 +17,8 @@ my_favorite_songs = [
     ['Nowhere to Run', 2.58],
     ['In This World', 4.02],
 ]
-
-songs = []
-for i in my_favorite_songs:
-    songs.append(my_favorite_songs[i])
-print(f'Три песни звучат {sum(r.sample(songs, k=3))} минут')
+songs_3 = r.sample(my_favorite_songs, k=3)
+S = 0
+for i in songs_3:
+    S += i[1]
+print(f'Три песни звучат {S} минут')
