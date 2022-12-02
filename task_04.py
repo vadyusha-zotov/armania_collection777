@@ -18,8 +18,7 @@ my_favorite_songs = [
     ['In This World', 4.02],
 ]
 
-songs_3 = r.sample(my_favorite_songs, k=3)
-S = 0
-for i in songs_3:
-    S += i[1]
-print(f'Три песни звучат {S} минут')
+songs = []
+for i in my_favorite_songs:
+    songs.append(my_favorite_songs[i])
+print(f'Три песни звучат {sum(r.sample(songs, k=3))} минут')
