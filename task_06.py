@@ -18,4 +18,12 @@ my_favorite_songs = {
 songs = []
 for i in my_favorite_songs:
     songs.append(my_favorite_songs[i])
-print(f'Три песни звучат {sum(r.sample(songs, k=3))} минут')
+time = 0
+i = 0 
+while i < 3:
+    import random
+    k = random.randint(0,len(songs) - 1)
+    time += songs[k]
+    songs.remove(songs[k])
+    i += 1
+print(f'Три песни звучат {time} минут')
