@@ -17,3 +17,9 @@ my_favorite_songs = [
     ['Nowhere to Run', 2.58],
     ['In This World', 4.02],
 ]
+
+songs_3 = r.sample(my_favorite_songs, k=3)
+S = 0
+for i in songs_3:
+    S += i[1]
+print(f'Три песни звучат {S} минут')
