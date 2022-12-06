@@ -1,0 +1,7 @@
+towns = ['Moscow', 'Sain-Petersburg', 'Novosibirsk']
+population =[12000000, 5000000, 1000000]
+
+numberOFcity = 1
+
+print('Население', towns[numberOFcity], '-', population[numberOFcity], 'человек')
+print('Итого населения - ', sum(population), 'человек')
