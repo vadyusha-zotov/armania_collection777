@@ -14,3 +14,38 @@ print('Наименьшее число в массиве', min)
 
 
 #https://www.codewars.com/kata/577a98a6ae28071780000989
+
+
+####################################################################################################
+# ПИСЕЦ ЯРЕШИЛ!!
+# используем сортировку пузырьком
+# Вариант 1 функции сортировки через многострочный цикл
+def bubblesort(l):
+    for i in range(len(l)-1):
+        for j in range(len(l)-i-1):
+            if l[j] > l[j+1]:
+                l[j], lst[j+1] = lst[j+1], lst[j]
+    return l
+    
+# Вариант 2 функции сортировки через однострочное списковое включение
+def bubblesort(l):
+    [l.append(l.pop(0) if i == len(l) - 1 or l[0] < l[1] else l.pop(1)) for j in range(0, len(l)) for i in range(0, len(l))]
+    return l
+
+# Максимум - это последний элемент отсортированного списка
+def maximum(arr):
+    return bubblesort(arr)[-1]
+
+# Минимум - это первый элемент отсортированного списка
+def minimum(arr):
+    return bubblesort(arr)[0]
+    
+    
+# PS решение с кодворс
+# def minimum(arr):
+#     return min(arr)
+
+# def maximum(arr):
+#     return max(arr)
+    
+# КАМОН БЛ..Ь
